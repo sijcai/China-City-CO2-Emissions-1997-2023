@@ -25,10 +25,10 @@ from sklearn.preprocessing import MinMaxScaler
 sector_settings = {
     "petroleum_coal_other_fuels": {
         "predictors": [
-            "Total_industrial_output_value_thousand_yuan",
-            "Crude.Oil.Processing_10000.tons",
-            "Coke_10000.tons",
-            "Raw.Coal_10000.tons"
+            "Output-PCFPI",
+            "CrudeOil",
+            "Coke",
+            "RCoal"
         ],
         "contamination": 0.15,
         "n_neighbors": 25
@@ -36,12 +36,12 @@ sector_settings = {
 
     "chemical_products": {
         "predictors": [
-            "Total_industrial_output_value_thousand_yuan",
-            "Calcium.Carbide_10000.tons",
-            "Chemical.Fiber_10000.tons",
-            "Soda.Ash_10000.tons",
-            "Synthetic.Ammonia_10000.tons",
-            "Ethylene_10000.tons"
+            "Output-Chem",
+            "CCarbide",
+            "ChemFiber",
+            "SodaAsh",
+            "SynAmmonia",
+            "Ethylene"
         ],
         "contamination": 0.20,
         "n_neighbors": 20
@@ -49,8 +49,8 @@ sector_settings = {
 
     "building_materials": {
         "predictors": [
-            "Total_industrial_output_value_thousand_yuan",
-            "Cement_10000.tons"
+            "Output-BM",
+            "Cement"
         ],
         "contamination": 0.25,
         "n_neighbors": 25
@@ -58,9 +58,9 @@ sector_settings = {
 
     "iron_and_steel": {
         "predictors": [
-            "Total_industrial_output_value_thousand_yuan",
-            "Pig.Iron_10000.tons",
-            "Crude.Steel_10000.tons"
+            "Output-ISI",
+            "PIron",
+            "CSteel"
         ],
         "contamination": 0.25,
         "n_neighbors": 20
@@ -68,8 +68,8 @@ sector_settings = {
 
     "nonferrous_metals": {
         "predictors": [
-            "Total_industrial_output_value_thousand_yuan",
-            "Primary.Aluminum_10000.tons"
+            "Output-NFMSI",
+            "PrimAlum"
         ],
         "contamination": 0.20,
         "n_neighbors": 25
@@ -77,8 +77,8 @@ sector_settings = {
 
     "electricity_and_heat": {
         "predictors": [
-            "Total_industrial_output_value_thousand_yuan",
-            "Coal_plant_capacity_mw"
+            "Output-EHS",
+            "CoalCap"
         ],
         "contamination": 0.25,
         "n_neighbors": 25
@@ -86,9 +86,9 @@ sector_settings = {
 
     "other": {
         "predictors": [
-            "DN_sum",
-            "Built_up_area_squarekilometer_shixiaqv",
-            "GDP_industry_hundredmillionyuan"
+            "NTL",
+            "BuiltArea",
+            "IndGDP"
         ],
         "contamination": 0.25,
         "n_neighbors": 25
